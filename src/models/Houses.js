@@ -22,5 +22,7 @@ export const HouseSchema = new Schema(
 HouseSchema.virtual('creator', {
   ref: 'Account',
   localField: 'creatorId',
-  foreignField: '_id'
+  foreignField: '_id',
+  justOne: true
+
 })
